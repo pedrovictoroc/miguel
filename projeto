@@ -1,0 +1,13 @@
+leitor_da_entrada = open('arquivo', 'r')
+armazenar_entrada = []
+limpar_entrada = []
+sudoku = [[]]*9
+for line in leitor_da_entrada:
+	armazenar_entrada.append(line)
+
+for valor in armazenar_entrada:
+	index = valor.index('\n')
+	limpar_entrada.append(valor[0:index])
+
+for i in range(0,len(limpar_entrada)):
+	
