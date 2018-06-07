@@ -1,0 +1,48 @@
+validacao = True
+teste = True
+linha= 0
+coluna=0
+elemento=0
+matriz = [[""] * 9 for i in range(9)]
+
+letras = {"A" : 0, "B" : 1, "C" : 2, "D" : 3, "E" : 4, "F" : 5, "G" : 6, "H" : 7, "I" : 8, "a" : 0, "b" : 1, "c" : 2, "d" : 3, "e" : 4, "f" : 5, "g" : 6, "h" : 7, "i" : 8}
+
+numero = [0, 1, 2, 3, 4, 5, 6, 7, 8]
+while validacao:
+
+    jogada=input().split()
+    jogada= ''.join(jogada)
+    jogada= jogada.upper()
+    
+    if jogada[0].isalpha() and jogada[0] in letras:
+        coluna = jogada[0]
+    else:
+        resposta1 = "O valor de entrada da coluna está errado"
+        teste=False
+    if jogada[1] != ',' and jogada[3] != ':':
+        resposta2 = "A separação dos elementos está errada, por favor, reescreva!"
+        teste=False
+    if int(jogada[2]) in numero:
+        linha = int(jogada[2])
+    else:
+        resposta3 = "Esse numero não está entre os valores possiveis de linha (de 0 até 8)!"
+        teste=False
+        
+    numero.append(9)
+
+    if int(jogada[4]) in numero:
+        elemento = int(jogada[4])
+    else:
+        resposta4 = "Esse numero não está entre os elementos possiveis para estarem no sudoku!"
+        #teste =False
+        
+    #if teste == False:
+        #print(resposta1)
+        #print(resposta2)
+        #print(resposta3)
+        #print(resposta4)
+
+    print(jogada)
+    print(linha)
+    print(coluna)
+    print(elemento)
