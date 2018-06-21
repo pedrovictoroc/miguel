@@ -5,6 +5,12 @@
 # python3
 
 # funções
+# UFC - Universidade Federal do Ceará
+# Pedro Victor Oliveira Carvalho, 417338
+# Pedro Lucas Nascimento Pinto, 412692
+# aluno 3, matrícula
+# python3
+
 def exibir_matriz(matriz):
     # separadores
     linha_letras = "    A   B   C    D   E   F    G   H   I"
