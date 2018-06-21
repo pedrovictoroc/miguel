@@ -136,7 +136,7 @@ def verificar_matriz_batch(matriz):
                     validacao_2[matriz[j][k]] += 1
         for l in range(0, 9): # verifica se há elementos repetidos na região
             if validacao_2[l] > 1:
-                print("A jogada ({},{}) = {} eh invalida! k doido".format(l,i+1,matriz[i][l]))
+                print("A jogada ({},{}) = {} eh invalida! k doido".format(letras[l],i+1,matriz[i][l]))
                 validacao = False
         auxiliar_2 += 3
         if (i + 1) % 3 == 0:
