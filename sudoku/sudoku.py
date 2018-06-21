@@ -280,6 +280,7 @@ elif selecao == 2:
             exibir_matriz(matriz)
             print(verificar_matriz_completa_batch(matriz))
         else:
+            exibir_matriz(matriz)
             print(verificar_matriz_completa_batch(matriz))
 else:
     print("Entrada invalida, tente novamente (!)")
