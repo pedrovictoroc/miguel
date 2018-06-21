@@ -120,11 +120,11 @@ def verificar_matriz_batch(matriz):
                     # verifica se há números repetidos na linha
                     if matriz[i][k] == matriz[i][j]:
                         validacao = False
-                        print("A jogada ({},{}) = {} eh invalida!".format(letras[i],k+1,matriz[i][k]))
+                        print("A jogada ({},{}) = {} eh invalida! ue".format(letras[k],i+1,matriz[i][k]))
                     # verifica se há números repetidos na coluna
                     if matriz[k][i] == matriz[j][i]:
                         validacao = False
-                        print("A jogada ({},{}) = {} eh invalida!".format(letras[i],k+1,matriz[i][k]))
+                        print("A jogada ({},{}) = {} eh invalida! sla".format(letras[i],k+1,matriz[k][i]))
 
     auxiliar = 0
     auxiliar_2 = 0
@@ -136,7 +136,7 @@ def verificar_matriz_batch(matriz):
                     validacao_2[matriz[j][k]] += 1
         for l in range(1, 10): # verifica se há elementos repetidos na região
             if validacao_2[l] > 1:
-                print("A jogada ({},{}) = {} eh invalida!".format(letras[i],k+1,matriz[i][k]))
+                print("A jogada ({},{}) = {} eh invalida! k doido".format(letras[l],i+1,matriz[i][l]))
                 validacao = False
         auxiliar_2 += 3
         if (i + 1) % 3 == 0:
@@ -202,8 +202,6 @@ def verificar_matriz_completa(matriz):
     if contador == 81:
         validacao = False
     return validacao
-
-def verificar_pistas_batch(matriz):
 	
 def verificar_matriz_completa_batch(matriz):
     validacao = True
@@ -276,15 +274,13 @@ elif selecao == 2:
 
     if verificar_quantidade_pistas(pistas): # verifica se a quantidade de pistas está no intervalo [1,80]
         gravar_pistas(pistas, matriz)
-        if verificar_pistas_batch(matriz) == False:
-
         gravar_pistas(jogadas_batch, matriz)
         if verificar_matriz_batch(matriz):
             matriz_pistas = matriz
             exibir_matriz(matriz)
             print(verificar_matriz_completa_batch(matriz))
         else:
-        	print(verificar_matriz_completa_batch(matriz))
+            print(verificar_matriz_completa_batch(matriz))
 else:
     print("Entrada invalida, tente novamente (!)")
 
