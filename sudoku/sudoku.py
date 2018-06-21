@@ -26,8 +26,8 @@ def exibir_matriz(matriz):
             if j == 2 or j == 5:
                 print("|", end="")
         print("|{}".format(i+1))
+    print(separador)    
     print(linha_letras)
-    print(separador)
 
 def ler_arquivo_texto(nome_arquivo):
     # abre o arquivo em modo leitura
